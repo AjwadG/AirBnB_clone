@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 ''' file storage module '''
 import json
+from models.base_model import BaseModel
 
 
 class FileStorage(object):
@@ -19,14 +20,14 @@ class FileStorage(object):
         ''' sets in __object the obj
             with the key <class name>.<id>
         '''
-        key = f"{obj.id}"
-        self.__objects.update({key: obj.to_dict()})
+        key = f"{obj.__class__.__name__}.{obj.id}"
+        self.__objects[key] = obj
 
     def save(self):
         ''' saves the object to a json file '''
         new_obj = {}
         for key, value in self.__objects.items():
-            new_obj.update({key: value})
+            new_obj[key] = value.to_dict()
         with open(self.__file_path, 'w') as file:
             json.dump(new_obj, file)
 
@@ -36,6 +37,7 @@ class FileStorage(object):
             with open(self.__file_path, 'r') as file:
                 file_content = json.load(file)
                 for key, value in file_content.items():
+                    print(value)
                     self.__objects.update({key: value})
         except FileNotFoundError:
             pass
