@@ -2,6 +2,7 @@
 ''' BaseModel class module '''
 from datetime import datetime
 from uuid import uuid4
+import models
 
 
 class BaseModel:
@@ -19,6 +20,7 @@ class BaseModel:
             self.id = str(uuid4())
             self.created_at = datetime.today()
             self.updated_at = datetime.today()
+            models.storage.new(self)
 
     def __str__(self):
         ''' returining string rep of the obj '''
@@ -29,6 +31,7 @@ class BaseModel:
     def save(self):
         ''' updates the updated_at attribute'''
         self.updated_at = datetime.today()
+        models.storage.save()
 
     def to_dict(self):
         ''' dic of the class '''

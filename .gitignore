@@ -12,3 +12,5 @@ a.out
 *.csv
 *.txt
 *.swp
+test.py
+tester.py
