@@ -1,8 +1,17 @@
 #!/usr/bin/python3
 ''' HBNBCommand class module'''
 import cmd
-from models.base_model import BaseModel
 from models import storage
+from models.amenity import Amenity
+from models.base_model import BaseModel
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
+from models.user import User
+
+models = {"BaseModel": BaseModel, "User": User, "State": State,
+          "City": City, "Amenity": Amenity, "Place": Place, "Review": Review}
 
 
 class HBNBCommand(cmd.Cmd):
@@ -14,10 +23,10 @@ class HBNBCommand(cmd.Cmd):
         args = line.split()
         if len(args) == 0:
             print("** class name missing **")
-        elif args[0] != "BaseModel":
+        elif args[0] not in models:
             print("** class doesn't exist **")
         else:
-            new = BaseModel()
+            new = models[args[0]]()
             storage.save()
             print(new.id)
 
@@ -32,7 +41,7 @@ class HBNBCommand(cmd.Cmd):
         args = line.split()
         if len(args) == 0:
             print("** class name missing **")
-        elif args[0] != "BaseModel":
+        elif args[0] not in models:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
@@ -55,7 +64,7 @@ class HBNBCommand(cmd.Cmd):
         args = line.split()
         if len(args) == 0:
             print("** class name missing **")
-        elif args[0] != "BaseModel":
+        elif args[0] not in models:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
@@ -80,7 +89,7 @@ class HBNBCommand(cmd.Cmd):
         objs = storage.all()
         strs = []
         if len(args) != 0:
-            if args[0] != "BaseModel":
+            if args[0] not in models:
                 print("** class doesn't exist **")
                 return
             else:
@@ -104,7 +113,7 @@ class HBNBCommand(cmd.Cmd):
         objs = storage.all()
         if len(args) == 0:
             print("** class name missing **")
-        elif args[0] != "BaseModel":
+        elif args[0] not in models:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
