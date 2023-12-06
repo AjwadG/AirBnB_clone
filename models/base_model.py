@@ -11,8 +11,8 @@ class BaseModel:
         ''' initing instance attributes '''
         if kwargs and len(kwargs) != 0:
             tf = "%Y-%m-%dT%H:%M:%S.%f"
-            kwargs["created_at"] = datetime.strptime(kwargs["created_at"], tf)
             kwargs["updated_at"] = datetime.strptime(kwargs["updated_at"], tf)
+            kwargs["created_at"] = datetime.strptime(kwargs["created_at"], tf)
             for key in kwargs:
                 if key != "__class__":
                     setattr(self, key, kwargs[key])
@@ -35,7 +35,7 @@ class BaseModel:
 
     def to_dict(self):
         ''' dic of the class '''
-        dic = self.__dict__
+        dic = self.__dict__.copy()
         dic["updated_at"] = dic["updated_at"].isoformat()
         dic["created_at"] = dic["created_at"].isoformat()
         dic["__class__"] = self.__class__.__name__
