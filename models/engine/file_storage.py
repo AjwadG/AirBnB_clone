@@ -36,9 +36,10 @@ class FileStorage(object):
     def reload(self):
         ''' reloads the object from a json file '''
         try:
-            with open(self.__file_path, 'r') as file:
+            with open(FileStorage.__file_path, 'r') as file:
                 file_content = json.load(file)
                 for key, value in file_content.items():
-                    self.__objects[key] = models[value["__class__"]](**value)
+                    obj = models[value["__class__"]](**value)
+                    FileStorage.__objects[key] = obj
         except FileNotFoundError:
             pass
