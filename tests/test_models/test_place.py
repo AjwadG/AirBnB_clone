@@ -6,17 +6,32 @@ from models.base_model import BaseModel
 
 
 class TestPlace(unittest.TestCase):
+    """
+    TestPlace
+    """
 
     def setUp(self):
+        """
+        setUp
+        """
         self.place = Place()
 
     def tearDown(self):
+        """
+        tearDown
+        """
         del self.place
 
     def test_inheritance(self):
+        """
+        test_inheritance
+        """
         self.assertIsInstance(self.place, BaseModel)
 
     def test_attributes(self):
+        """
+        test_attributes
+        """
         self.assertTrue(hasattr(self.place, 'id'))
         self.assertTrue(hasattr(self.place, 'created_at'))
         self.assertTrue(hasattr(self.place, 'updated_at'))
@@ -33,6 +48,9 @@ class TestPlace(unittest.TestCase):
         self.assertTrue(hasattr(self.place, 'amenity_ids'))
 
     def test_default_values(self):
+        """
+        test_default_values
+        """
         self.assertEqual(self.place.city_id, "")
         self.assertEqual(self.place.user_id, "")
         self.assertEqual(self.place.name, "")
@@ -46,10 +64,16 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(self.place.amenity_ids, [])
 
     def test_str_representation(self):
+        """
+        test_str_representation
+        """
         expected_output = f"[Place] ({self.place.id}) {self.place.__dict__}"
         self.assertEqual(str(self.place), expected_output)
 
     def test_edge_case_empty_attributes(self):
+        """
+        test_edge_case_empty_attributes
+        """
         self.place.city_id = ""
         self.place.user_id = ""
         self.place.name = ""
@@ -74,6 +98,9 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(self.place.amenity_ids, [])
 
     def test_edge_case_non_empty_attributes(self):
+        """
+        test_edge_case_non_empty_attributes
+        """
         self.place.city_id = "city1"
         self.place.user_id = "user1"
         self.place.name = "house"
@@ -98,6 +125,9 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(self.place.amenity_ids, [12, 34])
 
     def test_edge_case_attributes_type(self):
+        """
+        test_edge_case_attributes_type
+        """
         self.place.city_id = 123
         self.place.user_id = 123
         self.place.name = 123
