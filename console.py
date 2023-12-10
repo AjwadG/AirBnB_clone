@@ -15,7 +15,11 @@ models = {"BaseModel": BaseModel, "User": User, "State": State,
 
 
 class HBNBCommand(cmd.Cmd):
-    ''' cmd for AirBnB clone '''
+    ''' cmd for AirBnB clone
+
+    Attributes:
+        prompt (str): command prompt.
+    '''
     prompt = '(hbnb) '
 
     def default(self, line):
@@ -147,8 +151,8 @@ class HBNBCommand(cmd.Cmd):
             if (i + 1 == len(args)):
                 return
             args[i] = args[i].strip("{:").strip('\'\"')
-            args[i + 1] = args[i + 1].strip("},").strip('\"\'')
-            args[i + 1] = args[i + 1].strip("\"\'")
+            args[i + 1] = args[i + 1].strip("},)").strip('\"\'')
+            args[i + 1] = args[i + 1].strip("\"\')")
             if args[i] in inst.__dict__:
                 args[i + 1] = type(inst.__dict__[args[i]])(args[i + 1])
             inst.__dict__[args[i]] = args[i + 1]

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Unittest for BaseModel """
 import unittest
+import os
 from datetime import datetime
 from models.base_model import BaseModel
 
@@ -93,6 +94,13 @@ class TestBaseModel(unittest.TestCase):
         }
         with self.assertRaises(ValueError):
             BaseModel(**data)
+
+    def test_save_to_json_file(self):
+        ''' test if the file saving is good'''
+        base_model = BaseModel()
+        base_model.save()
+        with open("file.json", "r") as file:
+            self.assertIn(f"BaseModel.{base_model.id}", file.read())
 
 
 if __name__ == '__main__':

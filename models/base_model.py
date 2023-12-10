@@ -8,7 +8,12 @@ import models
 class BaseModel:
     ''' base model for all '''
     def __init__(self, *args, **kwargs):
-        ''' initing instance attributes '''
+        """Init of BaseModel.
+
+        Args:
+            *args (any): Unused.
+            **kwargs (dict): Key/value pairs of attributes.
+        """
         if kwargs and len(kwargs) != 0:
             tf = "%Y-%m-%dT%H:%M:%S.%f"
             kwargs["updated_at"] = datetime.strptime(kwargs["updated_at"], tf)

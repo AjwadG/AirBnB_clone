@@ -14,9 +14,12 @@ models = {"BaseModel": BaseModel, "User": User, "State": State,
 
 
 class FileStorage(object):
-    ''' serializes and deserializes objects to
-        and from json files
-    '''
+    """FILE storage engine.
+
+    Attributes:
+        __file_path (str): path of the file to save objects to.
+        __objects (dict): A dictionary of objects.
+    """
     __file_path = "file.json"
     __objects = {}
 
