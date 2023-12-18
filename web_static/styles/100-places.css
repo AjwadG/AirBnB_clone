@@ -51,7 +51,7 @@
 	height: 65px;
 	display: flex;
 	align-items: end;
-	justify-content: center;
+	justify-content: center
 }
 .max_guest {
 	background-image: url("../images/icon_group.png");
@@ -65,4 +65,51 @@
 
 .user span {
 	font-weight: bold;
+}
+
+article .amenities, article .reviews {
+	margin-top: 40px
+}
+
+article .amenities h2, article .reviews h2 {
+	position: static;
+	font-size: 16px;
+	transform: translateX(0);
+	border-bottom: 1px solid #DDDDDD
+}
+
+
+article .amenities ul, li {
+	margin-top: 5px;
+	padding-left: 0
+}
+article .amenities li {
+	padding-left: 28px;
+	margin-left: 2px;
+	background-repeat: no-repeat;
+	background-size: 18px 18px;
+	background-position: 0px center;
+}
+.pet {
+	background-image: url("../images/icon_pets.png");
+}
+.wifi {
+	background-image: url("../images/icon_wifi.png");
+}
+.tv {
+	background-image: url("../images/icon_tv.png");
+}
+article .reviews ul {
+	padding-left: 0;
+	margin-left: 2px
+}
+article .reviews h3 {
+	font-size: 14px;
+	margin: 20px 0 0 0;
+	font-weight: bold
+}
+
+article .reviews p {
+	font-size: 12px;
+	margin: 2px 0 0;
 }
