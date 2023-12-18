@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="icon" type="image/png" href="images/icon.png">
+		<title>AirBnB clone</title>
+
+		<link rel="stylesheet" href="styles/103-common.css">
+		<link rel="stylesheet" href="styles/103-header.css">
+		<link rel="stylesheet" href="styles/103-footer.css">
+		<link rel="stylesheet" href="styles/103-filters.css">
+		<link rel="stylesheet" href="styles/103-places.css">
+	</head>
+	<body>
+		<header aria-label="header" aria-description="Header with airbnb logo">
+		</header>
+		<div class="container">
+			<section class="filters" aria-label="filters search" aria-description="search by states or amenities">
+				<button>Search</button>
+
+				<div class="amenities">
+					<h3>Amenities</h3>
+					<h4>Internet, Kitchen...</h4>
+					<ul class="popover">
+						<li>Internet</li>
+						<li>TV</li>
+						<li>Kitchen</li>
+						<li>Iron</li>
+					</ul>
+				</div>
+
+				<div class="locations">
+					<h3>States</h3>
+					<h4>California, Arizona...</h4>
+					<ul class="popover">
+						<li>
+							<h2>Arizona:</h2>
+							<ul>
+								<li>Phoenix</li>
+								<li>Tucson</li>
+							</ul>
+						</li>
+						<li>
+							<h2>California:</h2>
+							<ul>
+								<li>Los Angeles</li>
+								<li>San Francisco</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="places" aria-label="places-list" aria-description="list of all places that matches the search">
+				<h1>Places</h1>
+				<div class="places-list">
+					<article aria-label="place" aria-description="place"> 
+						<h2 aria-description="place name">Home</h2>
+						<div class="price_by_night" aria-description="night price">80</div>
+						<div class="information">
+							<div class="max_guest" aria-description="max guests">2 Guests</div>
+							<div class="number_rooms" aria-description="number of bedrooms">1 Bedroom</div>
+							<div class="number_bathrooms" aria-description="number of bathrooms">1 Bathroom</div>
+						</div>
+						<div class="user" aria-description="the place owner">
+							<p><span>Owner:</span> Ajwad Elgandouz</p>
+						</div>
+						<div class="description" aria-description="Place description or info">
+							<p>Located in Terrasini, in a wonderful valley overlooking
+							the coast of the Gulf of Castellammare, Container Suite,
+							surrounded by a lush expanse of prickly pears, integrates
+							into the landscape in perfect harmony with the surrounding
+							territory.</p>
+						</div>
+						<div class="amenities" aria-description="list of place Amenities">
+							<h2>Amenities</h2>
+							<ul>
+								<li class="tv">TV</li>
+								<li class="wifi">WiFi</li>
+							</ul>
+						</div>
+						<div class="reviews" aria-description="list of place Amenities">
+							<h2>Reviews</h2>
+							<ul>
+								<li>
+									<h3>From Bob Dylan the 27th January 2017</h3>
+									<p>beautiful home and lovely host. situated in the 
+									gorgeous mountains with beautiful views in every
+									direction. would definitely book again!</p>
+								</li>
+								<li>
+									<h3>From Bob Dylan the 27th January 2017</h3>
+									<p>The container was exactly as pictured! Very cool
+									, quiet, peaceful, and the view was lovely.</p>
+								</li>
+							</ul>
+						</div>
+					</article>
+					<article aria-label="place" aria-description="place"> 
+						<h2 aria-description="place name">Lake house</h2> 
+						<div class="price_by_night" aria-description="night price">60</div>
+						<div class="information">
+							<div class="max_guest" aria-description="max guests">3 Guests</div>
+							<div class="number_rooms" aria-description="number of bedrooms">2 Bedrooms</div>
+							<div class="number_bathrooms" aria-description="number of bathrooms">2 Bathrooms</div>
+						</div>
+						<div class="user" aria-description="the place owner">
+							<p><span>Owner:</span> Hira Rajeev</p>
+						</div>
+						<div class="description" aria-description="Place description or info">
+							<p>Located in Terrasini, in a wonderful valley overlooking
+							the coast of the Gulf of Castellammare, Container Suite,
+							surrounded by a lush expanse of prickly pears, integrates
+							into the landscape in perfect harmony with the surrounding
+							territory.</p>
+						</div>
+						<div class="amenities" aria-description="list of place Amenities">
+							<h2>Amenities</h2>
+							<ul>
+								<li class="wifi">WiFi</li>
+								<li class="pet">Pets friendly</li>
+							</ul>
+						</div>
+						<div class="reviews" aria-description="list of place Amenities">
+							<h2>Reviews</h2>
+							<ul>
+								<li>
+									<h3>From Bob Dylan the 27th January 2017</h3>
+									<p>Perfect stay, super friendly and helpful host. 
+									Everything clean, room as in the photo beautiful
+									view and absolute tranquility Super recommended!</p>
+								</li>
+								<li>
+									<h3>From Bob Dylan the 27th January 2017</h3>
+									<p>The container was exactly as pictured! Very cool
+									, quiet, peaceful, and the view was lovely.</p>
+								</li>
+							</ul>
+						</div>
+					</article>
+					<article aria-label="place" aria-description="place"> 
+						<h2 aria-description="place name">Beach house</h2>
+						<div class="price_by_night" aria-description="night price">99</div>
+						<div class="information">
+							<div class="max_guest" aria-description="max guests">5 Guests</div>
+							<div class="number_rooms" aria-description="number of bedrooms">3 Bedrooms</div>
+							<div class="number_bathrooms" aria-description="number of bathrooms">4 Bathrooms</div>
+						</div>
+						<div class="user" aria-description="the place owner">
+							<p><span>Owner:</span> Spyridon Alexis</p>
+						</div>
+						<div class="description" aria-description="Place description or info">
+							<p>Located in Terrasini, in a wonderful valley overlooking
+							the coast of the Gulf of Castellammare, Container Suite,
+							surrounded by a lush expanse of prickly pears, integrates
+							into the landscape in perfect harmony with the surrounding
+							territory.</p>
+						</div>
+						<div class="amenities" aria-description="list of place Amenities">
+							<h2>Amenities</h2>
+							<ul>
+								<li class="tv">TV</li>
+								<li class="wifi">WiFi</li>
+								<li class="pet">Pets friendly</li>
+							</ul>
+						</div>
+						<div class="reviews" aria-description="list of place Amenities">
+							<h2>Reviews</h2>
+							<ul>
+								<li>
+									<h3>From Bob Dylan the 27th January 2017</h3>
+									<p>We had a lovely stay at the container suite. The
+									host was very responsive when needed at all times. 
+									Great view from the inside, clean place, one of a 
+									kind experience!</p>
+								</li>
+								<li>
+									<h3>From Bob Dylan the 27th January 2017</h3>
+									<p>The container was exactly as pictured! Very cool
+									, quiet, peaceful, and the view was lovely.</p>
+								</li>
+							</ul>
+						</div>
+					</article>
+				</div>
+			</section>
+		</div>
+		<footer aria-description="Footer of the page">
+			<span>Best School</span>
+		</footer>
+	</body>
+</html>
