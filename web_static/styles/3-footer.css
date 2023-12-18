@@ -3,7 +3,7 @@ footer {
 	height: 60px;
 	width: 100%;
 	position: absolute;
-	bottom: 0;
+	top: 100%;
 	border-top: 1px solid #CCCCCC;
 	text-align: center;
 	line-height: 60px;
