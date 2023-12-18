@@ -1,0 +1,50 @@
+section.filters {
+	background-color: white;
+	height: 70px;
+	width: 100%;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+}
+
+section.filters > button {
+	font-size: 18px;
+	background-color: #FF5A5F;
+	color: #FFFFFF;
+	height: 48px;
+	width: 20%;
+	border: none;
+	border-radius: 4px;
+	margin: auto 30px
+}
+
+section.filters button:hover {
+	opacity: 90%
+}
+
+section.filters .locations, section.filters .amenities {
+	height: 100%;
+	width: 25%;
+	border-right: 1px solid #DDDDDD;
+	display: flex;
+	flex-direction: column;
+	justify-content: center
+}
+
+section.filters .amenities {
+	margin-right: auto;
+	border-right: none
+}
+
+.locations h3, .amenities h3 {
+	font-weight: 600;
+	margin: 0 40px;
+}
+
+.locations h4, .amenities h4 {
+	margin: 0 40px;
+	font-weight: 400;
+	font-size: 14px
+}
